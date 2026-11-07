@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Le Meilleur Biscuit: pastelería artesanal con catálogo de productos y formulario de pedido."
+    />
+    <title>Le Meilleur Biscuit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio" class="logo">Le Meilleur Biscuit</a>
+
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#pedido">Pedido</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" aria-labelledby="titulo-principal">
+        <div class="hero-contenido">
+          <h1 id="titulo-principal">Le Meilleur Biscuit</h1>
+          <p>Pastelería artesanal para momentos especiales</p>
+
+          <div class="botones">
+            <a href="#catalogo" class="boton boton-principal">Ver catálogo</a>
+            <a href="#pedido" class="boton boton-secundario">Hacer pedido</a>
+          </div>
+        </div>
+
+        <div class="hero-imagen">
+          <img
+            src="img/portada.jpg"
+            alt="Mesa de postres artesanales de la pastelería"
+            width="1200"
+            height="800"
+            loading="eager"
+          />
+        </div>
+      </section>
+
+      <section id="catalogo" aria-labelledby="titulo-catalogo">
+        <h2 id="titulo-catalogo">Catálogo</h2>
+
+        <div class="catalogo-grid">
+          <article class="tarjeta-producto">
+            <img
+              src="img/torta-chocolate.jpg"
+              alt="Torta de chocolate"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Torta de chocolate</h3>
+            <p>Bizcocho húmedo con ganache.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img
+              src="img/tarta-frutos-rojos.jpg"
+              alt="Tarta de frutos rojos"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Tarta de frutos rojos</h3>
+            <p>Base crujiente y frutas frescas.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img
+              src="img/cupcakes-vainilla.jpg"
+              alt="Cupcakes de vainilla"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Cupcakes de vainilla</h3>
+            <p>Con crema de mantequilla.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img
+              src="img/brownies.jpg"
+              alt="Brownies"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Brownies</h3>
+            <p>Intensos, con nueces.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img
+              src="img/galletas-mantequilla.jpg"
+              alt="Galletas de mantequilla"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Galletas de mantequilla</h3>
+            <p>Horneadas cada mañana.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+
+          <article class="tarjeta-producto">
+            <img
+              src="img/croissants.jpg"
+              alt="Croissants"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <h3>Croissants</h3>
+            <p>Hojaldre de mantequilla.</p>
+            <a href="#pedido">Pedir</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="pedido" aria-labelledby="titulo-pedido">
+        <h2 id="titulo-pedido">Haz tu pedido</h2>
+
+        <form novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" required />
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" />
+          </div>
+
+          <div class="campo">
+            <label for="producto">Producto</label>
+            <select id="producto" name="producto" required>
+              <option value="">Selecciona un producto</option>
+              <option value="Torta de chocolate">Torta de chocolate</option>
+              <option value="Tarta de frutos rojos">Tarta de frutos rojos</option>
+              <option value="Cupcakes de vainilla">Cupcakes de vainilla</option>
+              <option value="Brownies">Brownies</option>
+              <option value="Galletas de mantequilla">Galletas de mantequilla</option>
+              <option value="Croissants">Croissants</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <input id="cantidad" name="cantidad" type="number" min="1" value="1" required />
+          </div>
+
+          <div class="campo">
+            <label for="fecha">Fecha deseada de entrega</label>
+            <input id="fecha" name="fecha" type="date" required />
+          </div>
+
+          <div class="campo campo-amplio">
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+          </div>
+
+          <button type="submit">Enviar solicitud</button>
+          <p role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Le Meilleur Biscuit</p>
+      <p>contacto@lemeilleurbiscuit.com</p>
+      <p>+56 9 1234 5678</p>
+      <p>Lunes a domingo | 9:00 - 19:00</p>
+    </footer>
+  </body>
+</html>
