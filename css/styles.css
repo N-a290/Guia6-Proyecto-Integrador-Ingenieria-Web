@@ -1,0 +1,379 @@
+/* Variables */
+:root {
+  --color-fondo: #F5EFE6;
+  --color-texto: #754C3B;
+  --color-acento: #C99B78;
+  --color-tarjeta: #E8D7C3;
+  --color-detalle: #A9A18F;
+  --color-superficie: #FFFDF9;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.75rem, 11vw, 4.5rem);
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(2.25rem, 8vw, 3.25rem);
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.75rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 0.15rem solid var(--color-acento);
+  outline-offset: 0.2rem;
+}
+
+main > section {
+  width: min(100% - 2rem, 82rem);
+  margin-inline: auto;
+  padding-block: 3.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--color-superficie);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: min(100% - 2rem, 82rem);
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  padding-block: 0.35rem;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-acento);
+  text-underline-offset: 0.25rem;
+}
+
+/* Inicio */
+#inicio {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding-block: 2.5rem 4rem;
+}
+
+.hero-contenido {
+  text-align: center;
+}
+
+.hero-contenido > p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.boton,
+form button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 0.0625rem solid var(--color-texto);
+  border-radius: 0.25rem;
+  background-color: var(--color-texto);
+  color: var(--color-superficie);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: var(--color-texto);
+}
+
+.boton:hover,
+form button:hover {
+  border-color: var(--color-acento);
+  background-color: var(--color-texto);
+  color: var(--color-superficie);
+  transform: translateY(-0.1rem);
+}
+
+.hero-imagen img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+/* Catálogo */
+#catalogo {
+  padding-block: 3.5rem;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.75rem;
+  border: 0.0625rem solid var(--color-tarjeta);
+  border-radius: 0.25rem;
+  background-color: var(--color-superficie);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.tarjeta-producto:hover,
+.tarjeta-producto:focus-within {
+  border-color: var(--color-acento);
+  transform: translateY(-0.2rem);
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1rem;
+  border-radius: 0.15rem;
+  object-fit: cover;
+}
+
+.tarjeta-producto p {
+  margin-bottom: 0.75rem;
+}
+
+.tarjeta-producto a {
+  margin-top: auto;
+  padding-block: 0.25rem;
+  font-weight: 700;
+  text-decoration-color: var(--color-acento);
+  text-underline-offset: 0.2rem;
+}
+
+.tarjeta-producto a:hover {
+  text-decoration-color: var(--color-acento);
+}
+
+/* Formulario */
+#pedido {
+  padding-block: 3.5rem;
+}
+
+form {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border-radius: 0.25rem;
+  background-color: var(--color-superficie);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo label {
+  font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.65rem 0.75rem;
+  border: 0.0625rem solid var(--color-detalle);
+  border-radius: 0.2rem;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.campo textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+form button {
+  justify-self: start;
+}
+
+[role="status"]:empty {
+  display: none;
+}
+
+[role="status"] {
+  margin: 0;
+  padding: 0.75rem;
+  border-left: 0.2rem solid var(--color-acento);
+  background-color: var(--color-fondo);
+}
+
+/* Pie de página */
+footer {
+  padding: 2rem 1rem;
+  background-color: var(--color-tarjeta);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.35rem;
+}
+
+footer p:first-child {
+  margin-bottom: 0.75rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    gap: 1.5rem;
+  }
+
+  #inicio {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 3rem;
+    padding-block: 4rem;
+  }
+
+  .hero-contenido {
+    text-align: left;
+  }
+
+  .botones {
+    justify-content: flex-start;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+
+  form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .campo-amplio,
+  form button,
+  [role="status"] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  main > section {
+    padding-block: 5rem;
+  }
+
+  #inicio {
+    gap: 4rem;
+    min-height: 34rem;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .tarjeta-producto {
+    padding: 1rem;
+  }
+}
