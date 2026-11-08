@@ -75,9 +75,9 @@ textarea:focus-visible {
 }
 
 main > section {
-  width: min(100% - 2rem, 82rem);
+  width: 100%;
   margin-inline: auto;
-  padding-block: 3.5rem;
+  padding: 3.5rem max(1rem, calc((100% - 82rem) / 2));
   scroll-margin-top: 1.5rem;
 }
 
@@ -135,6 +135,7 @@ nav {
   gap: 2rem;
   align-items: center;
   padding-block: 2.5rem 4rem;
+  background-color: var(--color-fondo);
 }
 
 .hero-contenido {
@@ -193,6 +194,10 @@ form button:hover {
 }
 
 /* Acerca de */
+#acerca {
+  background-color: var(--color-tarjeta);
+}
+
 .acerca-contenido {
   display: grid;
   gap: 1.5rem;
@@ -221,6 +226,7 @@ form button:hover {
 /* Catálogo */
 #catalogo {
   padding-block: 3.5rem;
+  background-color: var(--color-superficie);
 }
 
 .catalogo-grid {
@@ -273,6 +279,7 @@ form button:hover {
 /* Formulario */
 #pedido {
   padding-block: 3.5rem;
+  background-color: var(--color-fondo);
 }
 
 form {
